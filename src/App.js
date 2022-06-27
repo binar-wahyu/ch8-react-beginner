@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/Header";
 import TextCustom from "./components/TextCustom";
+import BlogDetail from "./pages/BlogDetail";
+import BlogList from "./pages/BlogList";
 import ContactUs from "./pages/ContactUs";
 
 function App() {
@@ -15,6 +17,12 @@ function App() {
           </Route>
           <Route path="/kontak-kami">
             <ContactUs />
+          </Route>
+          <Route path="/blog/:id">
+            <BlogDetail />
+          </Route>
+          <Route path="/blog">
+            <BlogList />
           </Route>
           <Route path="/">
             <TextCustom />

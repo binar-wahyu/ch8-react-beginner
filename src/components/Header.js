@@ -8,16 +8,20 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={NavLink} to="/" activeClassName="active" exact>
+            <Nav.Link as={NavLink} to="/" exact>
               Home
             </Nav.Link>
 
-            <Nav.Link as={NavLink} to="/tentang-kami" activeClassName="active">
+            <Nav.Link as={NavLink} to="/tentang-kami">
               Tentang Kami
             </Nav.Link>
 
-            <Nav.Link as={NavLink} to="/kontak-kami" activeClassName="active">
+            <Nav.Link as={NavLink} to="/kontak-kami">
               Hubungi Kami
+            </Nav.Link>
+
+            <Nav.Link as={NavLink} to="/blog">
+              Blog
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
