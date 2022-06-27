@@ -6,7 +6,7 @@ function BlogList() {
     <Container className="mt-3">
       <Row className="g-3">
         {[...Array(5)].map((_, index) => (
-          <Col lg={4}>
+          <Col lg={4} key={index}>
             <Card body>
               <Link to={`/blog/${index + 1}`}>Article {index + 1}</Link>
             </Card>
