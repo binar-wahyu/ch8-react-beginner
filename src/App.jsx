@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Header from "./components/Header";
 import TextCustom from "./components/TextCustom";
 import BlogDetail from "./pages/BlogDetail";
@@ -12,20 +12,22 @@ function App() {
         <Header />
 
         <Switch>
-          <Route path="/tentang-kami">
-            <h1>Tentang Kami</h1>
+          <Route path="/" exact>
+            <TextCustom />
+            <Link to="/tentang-kami">Pindah ke tentang kami</Link>
           </Route>
-          <Route path="/kontak-kami">
+          <Route path="/tentang-kami">
+            <h1>Tentang kami</h1>
+            <Link to="/">Pindah ke home</Link>
+          </Route>
+          <Route path="/hubungi-kami">
             <ContactUs />
+          </Route>
+          <Route path="/blog" exact>
+            <BlogList />
           </Route>
           <Route path="/blog/:id">
             <BlogDetail />
-          </Route>
-          <Route path="/blog">
-            <BlogList />
-          </Route>
-          <Route path="/">
-            <TextCustom />
           </Route>
         </Switch>
       </div>

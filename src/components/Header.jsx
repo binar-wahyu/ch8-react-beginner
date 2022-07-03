@@ -16,7 +16,7 @@ function Header() {
               Tentang Kami
             </Nav.Link>
 
-            <Nav.Link as={NavLink} to="/kontak-kami">
+            <Nav.Link as={NavLink} to="/hubungi-kami">
               Hubungi Kami
             </Nav.Link>
 
